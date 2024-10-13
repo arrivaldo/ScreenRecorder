@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Recorder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+
+    <section class=" ">
+        <div class="bg card">
+            <div class="title">
+                <h2>Screen Recorder</h2>
+    
+             </div>
+
+
+             <div class="a-container ">
+
+
+                
+                <div class="buttons">
+        
+                <button class="btn" id="startBtn"><svg id="Layer_3" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M30.03516,8.62988c-0.60449-0.36719-1.33789-0.38867-1.96289-0.06055l-4.61719,2.42017v-0.302c0-1.6543-1.3457-3-3-3H4   c-1.6543,0-3,1.3457-3,3v10.625c0,1.6543,1.3457,3,3,3h16.45508c1.6543,0,3-1.3457,3-3v-0.302l4.61719,2.42017   c0.29395,0.1543,0.61133,0.23047,0.92871,0.23047c0.35742,0,0.71387-0.09766,1.03418-0.29102   C30.63965,23.00488,31,22.36523,31,21.65918V10.34082C31,9.63477,30.63965,8.99512,30.03516,8.62988z M21.45508,21.3125   c0,0.55176-0.44824,1-1,1H4c-0.55176,0-1-0.44824-1-1v-10.625c0-0.55176,0.44824-1,1-1h16.45508c0.55176,0,1,0.44824,1,1v1.95508   v6.71484V21.3125z M29,21.65918l-5.54492-2.90625v-5.50586L29,10.34082l0.00488,11.32031L29,21.65918z"/></g></svg> Record</button>
+                <button class="btn stop" id="stopBtn" disabled> <svg fill="#fff" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 3C3.67157 3 3 3.67157 3 4.5V15.5C3 16.3284 3.67157 17 4.5 17H15.5C16.3284 17 17 16.3284 17 15.5V4.5C17 3.67157 16.3284 3 15.5 3H4.5Z" fill="#212121"/></svg>Stop</button>
+                <button class="btn pauseResume" id="pauseResumeBtn" disabled>
+                    <svg class="pause" fill="#fff"  height="32" id="icon" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title/><path d="M12,6H10A2,2,0,0,0,8,8V24a2,2,0,0,0,2,2h2a2,2,0,0,0,2-2V8a2,2,0,0,0-2-2Z"/><path d="M22,6H20a2,2,0,0,0-2,2V24a2,2,0,0,0,2,2h2a2,2,0,0,0,2-2V8a2,2,0,0,0-2-2Z"/><rect class="cls-1" data-name="&lt;Transparent Rectangle&gt;" height="32" id="_Transparent_Rectangle_" width="32"/></svg>
+                    Pause
+                </button>
+           
+           
+                <label class="label">
+                    <input type="checkbox" id="audioCheckbox"> Use Audio
+                </label>
+            </div>
+
+        </div>
+        
+
+        
+
+    </div>
+    <div class="p-class">
+        <p>Press Windows logo key + Shift + S to start a snip.</p>
+
+    </div>
+
+
+    </section>
+
+    <div id="recordingStatus">
+        <span id="timer">00:00</span> <!-- Timer Display -->
+        <div id="recordingIndicator" class="hidden">Recording...</div> <!-- Recording Indicator -->
+    </div>
+
+    <!-- <div class="out"></div> -->
+
+    <div id="videoPreviewContainer"></div> <!-- Container for video preview -->
+</div>    
+
+    <script src="app.js"></script>
+</body>
+</html>

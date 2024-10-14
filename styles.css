@@ -16,7 +16,19 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden !important;
+}
 
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.screen-section {
+    width: 465px;
 }
 
 .a-container {
@@ -24,8 +36,7 @@ body {
     /* padding: 5%; */
     width: 100%;
     height: 20%;
-   
-
+    margin-top: 2%;
 }
 
 .recorder-icon {
@@ -58,6 +69,9 @@ gap: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 6px;
+    margin-left: 5%;
+    margin-top: 2%;
 }
 
 .pause {
@@ -67,8 +81,8 @@ gap: 7px;
 .btn {
     /* background: #fff; */
     color:#fff;
-    font-size: 18px;
-    margin: 10px;
+    font-size: 11px;
+    /* margin: 10px; */
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -77,10 +91,11 @@ gap: 7px;
     justify-content: center;
     align-items: center;
     gap: 5px;
-    width: 127px;
+    width: 124px;
     /* background: #d9d9de; */
     background-color: #656e79;
-    height: 36px;
+    height: 28px;
+    background-color: #656e795e;
 }
 
 .btn:hover {
@@ -90,7 +105,7 @@ gap: 7px;
 
 .label {
     color: #fff;
-    font-size: 12px;
+    font-size: 11px;
     display: flex;
     align-items: center;
     margin-right: 2%;
@@ -105,6 +120,15 @@ gap: 7px;
 
 
     
+}
+
+.icon1 {
+    width: 20%;
+}
+.icon2 {
+    width: 20%;
+}.icon3 {
+    width: 22%;
 }
 
 .pauseResume {
@@ -129,14 +153,14 @@ gap: 7px;
     width: 100%;
 }
 
+
 #videoPreviewContainer video {
     display: block;
     margin-top: 20px;
-    width: 17%;
+    width:17%;
 }
 
 #recordingStatus {
-    margin-top: 10px;
     font-size: 18px;
 }
 
@@ -147,7 +171,7 @@ gap: 7px;
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .btn {
         font-size: 18px;
         padding: 8px 16px;
@@ -156,14 +180,15 @@ gap: 7px;
     #videoPreviewContainer video {
         width: 100%;
     }
-}
+} */
 
 .p-class {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 52px;
+    font-size: 12px;
 
 
     
@@ -195,7 +220,7 @@ width: 100%;
 /* background: #e0e0e0;
 box-shadow:  20px 20px 60px #bebebe,
              -20px -20px 60px #ffffff; */
-             height: 45%;
+             height: 64%;
 
 
 
@@ -217,4 +242,81 @@ box-shadow:  20px 20px 60px #bebebe,
     border: 1px solid rgba(255, 255, 255, 0.125);
     width: 300px;
     height: 300px;
+}
+
+
+
+@media screen (max-width: 320px) {
+
+  
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 399px) {
+
+    .screen-section {
+        width: 300px;
+    }
+
+    .btn {
+        width: 72px;
+        font-size: ;
+    }
+    .icon1{
+        width: 80%;
+    }
+    .icon2{
+        width: 23%;
+    }
+
+    .p-class {
+        font-size: 10px;
+        height: 37px;
+    }
+    
+    #videoPreviewContainer video {
+        width: 52%;
+    }
+
+    .wrapper {
+        gap: 2px;
+    }
+
+    }
+    
+    
+@media screen and (min-width: 400px) and (max-width: 500px) { 
+    /* CSS rules for devices with widths between 321 pixels and 768 pixels */ 
+
+    .screen-section {
+        width: 360px;
+    }
+
+    .btn {
+        width: 91px;
+    }
+    .icon1{
+        width: 80%;
+    }
+    .icon2{
+        width: 23%;
+    }
+    #videoPreviewContainer video {
+        width: 28%;
+    }
+    
+}
+ @media screen and (min-width: 501px) and (max-width: 640px) {
+    #videoPreviewContainer video {
+        width: 23%;
+    }
+  } 
+  @media screen and (min-width: 641px) and (max-width: 715px) { 
+    #videoPreviewContainer video {
+        width: 20%;
+    }
+  } 
+  
+  @media screen and (min-width: 716px) and (max-width: 819px) { 
+    /* CSS rules for devices with widths between 321 pixels and 768 pixels */ 
 }

@@ -4,7 +4,7 @@ const pauseResumeBtn = document.getElementById('pauseResumeBtn');
 const audioCheckbox = document.getElementById('audioCheckbox');
 const videoPreviewContainer = document.getElementById('videoPreviewContainer');
 const timerDisplay = document.getElementById('timer');
-const recordingIndicator = document.getElementById('recordingIndicator');
+// const recordingIndicator = document.getElementById('recordingIndicator');
 let mediaRecorder;
 let startTime;
 let timerInterval;
@@ -14,12 +14,11 @@ let mediaStream;  // Store media stream for later stopping
 
 // Function to start the recording process
 async function startRecording() {
-    if (!navigator.mediaDevices || !navigator.mediaDevices.getDisplayMedia) {
-        alert("Your browser does not support screen recording.");
-        return;
-    }
+    // if (!navigator.mediaDevices || !navigator.mediaDevices.getDisplayMedia) {
+    //     alert("Your browser does not support screen recording.");
+    //     return;
+    // }
 
-    try {
         mediaStream = await navigator.mediaDevices.getDisplayMedia({
             video: { frameRate: { ideal: 30 } },
             audio: audioCheckbox.checked ? true : false
@@ -33,7 +32,7 @@ async function startRecording() {
         startBtn.disabled = true;
         stopBtn.disabled = false;
         pauseResumeBtn.disabled = false;
-        recordingIndicator.classList.remove('hidden'); // Show recording indicator
+        // recordingIndicator.classList.remove('hidden');
         startTimer();  // Start timer display
         pauseResumeBtn.textContent = "Pause Recording";
 
@@ -57,11 +56,8 @@ async function startRecording() {
             videoPreviewContainer.innerHTML = ''; // Clear previous preview
             videoPreviewContainer.appendChild(videoPreview);
         });
-    } catch (error) {
-        console.error('Error accessing media devices:', error);
-        alert("An error occurred while accessing your screen or audio: " + error.message);
-    }
-}
+    } 
+
 
 // Function to stop the recording
 function stopRecording() {
@@ -72,7 +68,7 @@ function stopRecording() {
         startBtn.disabled = false;
         stopBtn.disabled = true;
         pauseResumeBtn.disabled = true;
-        recordingIndicator.classList.add('hidden'); // Hide recording indicator
+        // recordingIndicator.classList.add('hidden'); 
         resetTimer();
         pauseResumeBtn.textContent = "Pause Recording";  // Reset button text
         isPaused = false;  // Reset pause state

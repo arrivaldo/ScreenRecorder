@@ -1,8 +1,19 @@
+
 body {
-    background-color: #f0f4f8;
     height: 100vh;
     padding: 0;
     margin: 0;
+    background-color: #09090b;
+    overflow: hidden !important;
+    font-family: Arial, sans-serif;
+
+background-color: #00001c;
+}
+
+
+main {
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,12 +23,80 @@ body {
     /* background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
     background-position: center; */
 
-    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+    /* background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden !important;
 }
+.main-title {
+    font-size: 28px;
+}
+nav {
+    width: 100%;
+    background-color: #09090b;
+    padding: 2% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+}
+
+nav .logo {
+    color: #fff; /* Logo text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 24px; /* Logo font size */
+    font-weight: bold; /* Logo font weight */
+    margin-left: 20px; /* Space from the left edge */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+nav {
+    width: 100%;
+    background-color: #09090b;
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-between; /* Align items to the start */
+    align-items: center;
+    gap: 25px;
+    position: relative;
+}
+
+.anchors {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-left: -25%;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-btn {
+    position: absolute;
+    right: 5%;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav-btn:hover {
+    background-color: #e64a19;
+}
+
 
 .wrapper {
     display: flex;
@@ -25,12 +104,23 @@ body {
     align-items: center;
     gap: 15px;
     flex-direction: column;
+    width: 100%;
+    margin-top: -10%;
 }
 
 .screen-section {
     width: 465px;
 }
+.p-main {
+    width: 72%;
+    margin-left: 15%;
+    margin: 2% 15%;
+}
 
+.text-center {
+    width: 50%;
+    text-align: center;
+}
 .a-container {
     display: flex;
     /* padding: 5%; */
@@ -76,6 +166,17 @@ gap: 7px;
 
 .pause {
     width: 60%;
+}
+h1 {
+    font-size: 42px;
+}
+h3 {
+    line-height: 28px;
+    font-weight: 500;
+    color: #ffffffa3;
+    width: 104%;
+    margin-left: 1%;
+    margin-bottom: 5%;
 }
 
 .btn {
@@ -160,7 +261,7 @@ gap: 7px;
 
 #videoPreviewContainer video {
     display: block;
-    margin-top: 20px;
+    margin-top: 40px;
     width:17%;
 }
 
@@ -290,6 +391,16 @@ box-shadow:  20px 20px 60px #bebebe,
         display: none;
     }
 
+    .text-center {
+        width: 85%;
+    }
+    .policy-a {
+        display: none;
+    }
+    .home-a {
+        display: none;
+    }
+
     }
     
     
@@ -312,18 +423,32 @@ box-shadow:  20px 20px 60px #bebebe,
     #videoPreviewContainer video {
         width: 28%;
     }
+    .text-center {
+        width: 85%;
+    }
+    .policy-a {
+        display: none;
+    }
+    .home-a {
+        display: none;
+    }
     
 }
  @media screen and (min-width: 501px) and (max-width: 640px) {
     #videoPreviewContainer video {
         width: 23%;
     }
+    .text-center {
+        width: 85%;
+    }
   } 
   @media screen and (min-width: 641px) and (max-width: 715px) { 
     #videoPreviewContainer video {
         width: 20%;
     }
-  } 
+    .text-center {
+        width: 85%;
+    }
   
   @media screen and (min-width: 716px) and (max-width: 819px) { 
     /* CSS rules for devices with widths between 321 pixels and 768 pixels */ 
